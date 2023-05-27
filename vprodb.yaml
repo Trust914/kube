@@ -15,11 +15,11 @@ spec:
       containers:
       - name: vprodb
         image: trusst/vprodb:v1
-        args:
-          - "ignore-db-dir=lost+found"
+#        args:
+#          - "ignore-db-dir=lost+found"
         volumeMounts:
           - name: vprodb-data
-            mountPath: /var/lib/mysql      
+            mountPath: /var/lib/mysql
         ports:
         - name: vprodb-port
           containerPort: 3306
