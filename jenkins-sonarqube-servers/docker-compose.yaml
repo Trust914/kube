@@ -29,6 +29,7 @@ services:
       - SonarQube_logs:/opt/SonarQube/logs
     ports:
       - "9000:9000"
+    container_name: sonarqube
 
 volumes:
   SonarQube_data:
