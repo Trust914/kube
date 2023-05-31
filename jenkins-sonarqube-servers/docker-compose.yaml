@@ -11,14 +11,7 @@ services:
     volumes:
       - /home/centos/jenkins_compose/jenkins_configuration:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./jenkins-plugins.txt:/usr/share/jenkins/ref/plugins.txt
-    environment:
-      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
-      - JENKINS_USER=admin
-      - JENKINS_PASS=admin
-    command: >
-      bash -c "while [ ! -f /var/jenkins_home/secrets/initialAdminPassword ]; do sleep 1; done;
-      jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt"  
+      - ./jenkins-plugins.txt:/usr/share/jenkins/ref/plugins.txt 
 
   sonarqube:
     image: sonarqube:community
