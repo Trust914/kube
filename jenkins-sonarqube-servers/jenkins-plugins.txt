@@ -1,4 +1,4 @@
-docker
-docker-pipeline
-cloudBees-docker-build-and-publish
+docker-plugin
+docker-workflow
+cloudbees-docker-build-and-publish
 pipeline-utility-steps
